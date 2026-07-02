@@ -36,5 +36,7 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/openclaw:${{ github.event.inputs.tag }}
+          build-args: |
+            OPENCLAW_INSTALL_BROWSER=1
           cache-from: type=gha
           cache-to: type=gha,mode=max
